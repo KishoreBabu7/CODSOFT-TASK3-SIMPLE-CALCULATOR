@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: url("background.jpg"), no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.calculator {
+    border: 1px solid #89375F;
+    padding: 20px;
+    border-radius: 16px;
+    background: #cdcdcd;
+    box-shadow: 0px 3px 15px rgba(160, 49, 73, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0px 0px 2px rgb(255, 0, 0) ;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: start;
+    background-color: #0000005e;
+    top: 1.6em;
+    left: 6em;
+    right: 1.5em;
+}
+
+p {
+    font-family: "Poppins","sans-serif";
+    text-align: justify;
+    align-items: start;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 20px;
+    background-color: #0000005e;
+    background-size: 100%;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+input {
+    border-radius: 3%;
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: #f5f5f5;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.highlight {
+    color: rgba(0, 230, 64, 1);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.op {
+    background-color: #d76d77;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.op:hover {
+    background-color: #c9302c;
+    transform: scale(1.1);
+}
+
+.calculator button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: #ffaf7b;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px 8px 15px rgba(255, 255, 255, 0.13);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator button:hover {
+    background-color: #3a1c71;
+    transform: scale(1.1);
+    box-shadow: -2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.link {
+    color: #3a1c71;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link:hover {
+    color: #d76d77;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+
+.calculator {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fbc2eb);
+    border: 2px solid #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    background: #f8f8f8;
+    color: #3a1c71;
+}
+
+.op {
+    background-color: #ff7eb9;
+}
+
+.op:hover {
+    background-color: #f7327f;
+}
+
+.calculator button {
+    background: #ff7eb9;
+    color: #ffffff;
+}
+
+.calculator button:hover {
+    background-color: #f7327f;
+    box-shadow: -2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.wrapper {
+    position: relative;
+    flex-direction: row;
+    display: inline-flex;
+    list-style: none;
+  }
+  
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    color: #000;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+  
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+  
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #ffffff;
+}
+  
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #222222;
+    color: #ffffff;
+}
+  
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #ffffff;
+}
+  
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #833ab4;
+    color: #ffffff;
+}
+  
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #cd201f;
+    color: #ffffff;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-direction: column;
+}
+  
+nav ul li {
+     display: inline;
+}
+  
+nav ul li a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    transition: color 0.5s;
+}
+  
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+    bottom: 0;
+    left: 50%;
+}
+  
+nav ul li a:hover {
+    color: #ffffff;
+}
+  
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
